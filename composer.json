@@ -1,0 +1,53 @@
+{
+  "name": "jurryzhang/comments",
+  "description": "The comments for objects.",
+  "version": "0.0.1-dev",
+  "keywords": [
+    "comments"
+  ],
+  "homepage": "https://github.com/jurryzhang/comments",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Zaire Zhang",
+      "email": "zairezhang@sina.com",
+      "homepage": "https://github.com/jurryzhang"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "illuminate/auth": "^5.8|^6.0|^7.0",
+    "illuminate/container": "^5.8|^6.0|^7.0",
+    "illuminate/contracts": "^5.8|^6.0|^7.0",
+    "illuminate/database": "^5.8|^6.0|^7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8|^4.0|^5.0",
+    "phpunit/phpunit": "^8.0",
+    "predis/predis": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jurryzhang\\Comments\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Jurryzhang\\Comments\\CommentServiceProvider"
+      ]
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
+  }
+}

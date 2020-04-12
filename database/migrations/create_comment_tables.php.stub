@@ -1,0 +1,51 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePermissionTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $tableNames = config('comment.table_names');
+
+        Schema::create($tableNames['comments'], function (Blueprint $table) {
+            $table->increments('id');
+            $table->morphs('model');
+            $table->morphs('user');
+            $table->integer('top_id')->comment('层主评论ID，0表示就是层主')->default(0);
+            $table->integer('parent_id')->comment('回复的评论ID')->default(0);
+            $table->text('content')->comment('评论内容');
+            $table->softDeletes();
+            $table->timestamps();
+        });
+
+        Schema::create($tableNames['thumbs'], function (Blueprint $table) {
+            $table->increments('id');
+            $table->morphs('model');
+            $table->morphs('user');
+            $table->softDeletes();
+            $table->timestamps();
+        });
+
+ }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $tableNames = config('comment.table_names');
+
+        Schema::drop($tableNames['comments']);
+        Schema::drop($tableNames['thumbs']);
+    }
+}
