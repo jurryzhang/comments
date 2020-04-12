@@ -43,7 +43,7 @@ class CommentServiceProvider extends ServiceProvider {
 
 	protected function registerModelBindings()
 	{
-		$config = $this->app->config['permission.models'];
+		$config = $this->app->config['comment.models'];
 
 		$this->app->bind(Comment::class, $config['comment']);
 		$this->app->bind(Thumb::class, $config['thumb']);

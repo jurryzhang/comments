@@ -19,8 +19,8 @@ class CommentRegistrar {
 	 */
 	public function __construct()
 	{
-		$this->commentClass = config('permission.models.comment');
-		$this->thumbClass   = config('permission.models.thumb');
+		$this->commentClass = config('comment.models.comment');
+		$this->thumbClass   = config('comment.models.thumb');
 	}
 
 	/**
