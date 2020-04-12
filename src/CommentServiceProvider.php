@@ -36,8 +36,8 @@ class CommentServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->mergeConfigFrom(
-			__DIR__.'/../config/comments.php',
-			'comments'
+			__DIR__.'/../config/comment.php',
+			'comment'
 		);
 	}
 

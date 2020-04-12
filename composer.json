@@ -29,7 +29,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Jurryzhang\\Comments\\": "src/"
+      "Jurryzhang\\Comment\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -40,7 +40,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Jurryzhang\\Comments\\CommentServiceProvider"
+        "Jurryzhang\\Comment\\CommentServiceProvider"
       ]
     }
   },
