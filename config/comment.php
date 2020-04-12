@@ -3,8 +3,8 @@
 return [
 
 	'models' => [
-		'comment' => Spatie\Permission\Models\Comment::class,
-		'thumb'   => Spatie\Permission\Models\Thumb::class,
+		'comment' => Jurryzhang\Comment\Models\Comment::class,
+		'thumb'   => Jurryzhang\Comment\Models\Thumb::class,
 	],
 
 	'table_names' => [

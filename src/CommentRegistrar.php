@@ -1,9 +1,9 @@
 <?php
 
-namespace Jurryzhang\Comments;
+namespace Jurryzhang\Comment;
 
-use Spatie\Permission\Models\Comment;
-use Spatie\Permission\Models\Thumb;
+use Jurryzhang\Comment\Models\Comment;
+use Jurryzhang\Comment\Models\Thumb;
 
 class CommentRegistrar {
 

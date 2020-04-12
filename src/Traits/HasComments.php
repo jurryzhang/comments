@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Jurryzhang\Comment\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Jurryzhang\Comments\CommentRegistrar;
+use Jurryzhang\Comment\CommentRegistrar;
 
 trait HasComments
 {

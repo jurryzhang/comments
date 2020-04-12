@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Models;
+namespace Jurryzhang\Comment\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Spatie\Permission\Traits\HasThumbs;
+use Jurryzhang\Comment\Traits\HasThumbs;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model {
@@ -18,7 +18,7 @@ class Comment extends Model {
 	{
 		parent::__construct($attributes);
 
-		$this->setTable(config('comment.table_names.commentss'));
+		$this->setTable(config('comment.table_names.comment'));
 	}
 
 	public function parent(): BelongsTo

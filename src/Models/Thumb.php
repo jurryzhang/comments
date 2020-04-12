@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Models;
+namespace Jurryzhang\Comment\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;

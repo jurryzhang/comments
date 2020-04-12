@@ -1,12 +1,12 @@
 <?php
 
-namespace Jurryzhang\Comments;
+namespace Jurryzhang\Comment;
 
 use Illuminate\Support\Collection;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
-use Spatie\Permission\Models\Comment;
-use Spatie\Permission\Models\Thumb;
+use Jurryzhang\Comment\Models\Comment;
+use Jurryzhang\Comment\Models\Thumb;
 
 class CommentServiceProvider extends ServiceProvider {
 
@@ -15,7 +15,7 @@ class CommentServiceProvider extends ServiceProvider {
 		if (function_exists('config_path'))
 		{ // function not available and 'publish' not relevant in Lumen
 			$this->publishes([
-				__DIR__.'/../config/comments.php' => config_path('comments.php'),
+				__DIR__.'/../config/comment.php' => config_path('comment.php'),
 			], 'config');
 
 			$this->publishes([
